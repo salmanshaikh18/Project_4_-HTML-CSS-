@@ -4,52 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
     <style>
-        h1, div {
+        h1, p {
             text-align: center;
-            font-size: xx-large;
         }
-        body {
-            background-color: aqua;
+
+        .mobiles, .tablets, .laptops, .largelaptops {
+            display:none;
+            font-size: x-large;
         }
+
         @media screen and (min-width:1024px) and (max-width:1440px) {
             body {
-                background-color: green;
+                background-color: forestgreen;
             }
-            div::after {
-                content:"Screen size : 1440px"
+            .largelaptops {
+                display:block;
             }
         }
         @media screen and (min-width:768px) and (max-width:1024px) {
             body {
-                background-color: #db9320;
+                background-color: darkgoldenrod;
             }
-            div::after {
-                content:"Screen size : 1024px"
+            .laptops {
+                display:block;
             }
         }
         @media screen and (min-width:425px) and (max-width:768px) {
             body {
-                background-color: aquamarine;
+                background-color: aqua;
             }
-            div::after {
-                content:"Screen size : 768px"
+            .tablets {
+                display:block;
             }
         } 
         @media screen and (max-width:425px) {
             body {
-                background-color: #d65353;
+                background-color: crimson;
             }
-            div::after {
-                content:"Screen size : 425px"
+            .mobiles {
+                display:block;
             }
         }
-           </style>
+    </style>
     <title>Document</title>
 </head>
 <body>
     <h1>This is a Media Query demo page.</h1>
-    <div></div>
+    <p class="mobiles">Screen size : 425px</p>
+    <p class="tablets">Screen size : 768px</p>
+    <p class="laptops">Screen size : 1024px</p>
+    <p class="largelaptops">Screen size : 1440px</p>
 </body>
 </html>
